@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "removeComments": false
+    },
+    "include": ["packages/*/src/**/*.ts", "packages/*/tests/**/*.test.ts"]
+}
