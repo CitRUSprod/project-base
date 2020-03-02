@@ -40,11 +40,12 @@ for (const name of packageNames) {
 
             for (const dependency in dependencies) {
 
-                const re = new RegExp(`^@${oldProjectName}/.+$`)
+                const re = new RegExp(`^@${oldProjectName}\\/(.+)$`)
+                const matchArray = dependency.match(re)
 
-                if (dependency.match(re)) {
+                if (matchArray !== null) {
 
-                    const packageName = dependency.split("/")[1]
+                    const packageName = matchArray[1]
                     const version = dependencies[dependency]
                     delete dependencies[dependency]
                     dependencies[`@${projectName}/${packageName}`] = version
@@ -80,8 +81,8 @@ for (const name of packageNames) {
 
         const absFilePath = getPackagesPath(name, filePath)
         const file = fs.readFileSync(absFilePath, "utf8")
-        const re = new RegExp(`"@${oldProjectName}/.+"`, "g")
-        const newFile = file.replace(re, match => `"@${projectName}/${match.split("/")[1]}"`)
+        const re = new RegExp(`"@${oldProjectName}\\/(.+)"`, "g")
+        const newFile = file.replace(re, `"@${projectName}/$1"`)
         fs.writeFileSync(absFilePath, newFile)
 
     }
