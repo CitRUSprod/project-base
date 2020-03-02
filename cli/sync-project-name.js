@@ -1,6 +1,6 @@
 const path = require("path")
 const fs = require("fs-extra")
-const { getPackageNames, getPackagesPath, saveJson, sortObject } = require("../utils")
+const { getFilePaths, getPackageNames, getPackagesPath, saveJson, sortObject } = require("../utils")
 
 
 const projectPath = path.join(__dirname, "..")
@@ -40,7 +40,9 @@ for (const name of packageNames) {
 
             for (const dependency in dependencies) {
 
-                if (dependency.startsWith(`@${oldProjectName}/`)) {
+                const re = new RegExp(`^@${oldProjectName}/.+$`)
+
+                if (dependency.match(re)) {
 
                     const packageName = dependency.split("/")[1]
                     const version = dependencies[dependency]
@@ -71,6 +73,18 @@ for (const name of packageNames) {
     changeDependencies(true)
 
     saveJson(packageJsonPath, packageJson)
+
+    const filePaths = getFilePaths(getPackagesPath(name), /^(?!dist)[^/]+\/.+[^/]\.ts$/)
+
+    for (const filePath of filePaths) {
+
+        const absFilePath = getPackagesPath(name, filePath)
+        const file = fs.readFileSync(absFilePath, "utf8")
+        const re = new RegExp(`"@${oldProjectName}/.+"`, "g")
+        const newFile = file.replace(re, match => `"@${projectName}/${match.split("/")[1]}"`)
+        fs.writeFileSync(absFilePath, newFile)
+
+    }
 
 }
 
