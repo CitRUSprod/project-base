@@ -6,7 +6,7 @@
 
 ```bash
 $ cd my-project
-$ git clone https://github.com/CitRUSprod/example.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name
+$ git clone https://github.com/CitRUSprod/example.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name && yarn
 ```
 
 ## Usage
