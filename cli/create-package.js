@@ -29,14 +29,7 @@ for (const packageName of packageNames) {
         author,
         license,
         scripts: { test: "jest --colors" },
-        jest: {
-            transform: {
-                "\\.ts$": [
-                    "babel-jest",
-                    { configFile: "../../babel.config.json" }
-                ]
-            }
-        }
+        jest: { preset: "ts-jest" }
     }
 
     const indexTs = [

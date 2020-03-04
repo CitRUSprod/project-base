@@ -9,13 +9,6 @@
         "test": "jest --colors"
     },
     "jest": {
-        "transform": {
-            "\\.ts$": [
-                "babel-jest",
-                {
-                    "configFile": "../../babel.config.json"
-                }
-            ]
-        }
+        "preset": "ts-jest"
     }
 }

@@ -3,7 +3,6 @@ const WebpackBeforeBuildPlugin = require("before-build-webpack")
 const NodemonPlugin = require("nodemon-webpack-plugin")
 const nodeExternals = require("webpack-node-externals")
 const { createDeclarationFiles, getEntry, getPackagesPath } = require("./utils")
-const babelOptions = require("./babel.config.json")
 
 
 module.exports = (env = {}) => ({
@@ -43,10 +42,7 @@ module.exports = (env = {}) => ({
         rules: [
             {
                 test: /\.ts$/,
-                use: {
-                    loader: "babel-loader",
-                    options: babelOptions
-                },
+                use: "ts-loader",
                 exclude: /node_modules/
             },
             {
