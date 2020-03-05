@@ -11,8 +11,8 @@ class Logger {
      * @param prefix - Prefix for console logs.
      * @memberof Logger
      * @example
-     * ```typescript
-     * const logger: Logger = new Logger("Example: ")
+     * ```javascript
+     * const logger = new Logger("Example: ")
      * ```
      */
     public constructor(private readonly prefix: string) {}
@@ -23,10 +23,9 @@ class Logger {
      * @param text - Text for log.
      * @memberof Logger
      * @example
-     * ```typescript
-     * const logger: Logger = new Logger("Example: ")
+     * ```javascript
+     * const logger = new Logger("Example: ")
      * logger.log("Test message")
-     *
      * // Console output: "Example: Test message"
      * ```
      */
