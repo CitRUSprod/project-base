@@ -5,7 +5,7 @@
 ## Installation:
 
 ```bash
-$ cd my-project
+$ cd <project-name>
 $ git clone https://github.com/CitRUSprod/example.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name
 ```
 
@@ -25,16 +25,22 @@ $ yarn dev:watch:nodemon
 $ yarn build
 ```
 
+### Launch app (only after build)
+
+```bash
+$ node .
+```
+
 ### Create documentation
 
 ```bash
 $ yarn docs
 ```
 
-### Create a new package
+### Create new packages
 
 ```bash
-$ yarn create-package
+$ yarn create-package <package-name> [<package-name> ...]
 ```
 
 ### Sync project name with folder name (when changing the folder name)
