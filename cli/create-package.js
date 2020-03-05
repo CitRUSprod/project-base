@@ -1,3 +1,4 @@
+const { execSync } = require("child_process")
 const _ = require("lodash")
 const fs = require("fs-extra")
 const { getPackagesPath, saveFile, saveJson } = require("../utils")
@@ -76,3 +77,8 @@ for (const packageName of packageNames) {
     console.log(`The ${packageName} package was successfully created.`)
 
 }
+
+
+console.log("Creating symlinks...")
+execSync("yarn")
+console.log("Symlinks were successfully created.")
