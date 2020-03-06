@@ -9,6 +9,7 @@ module.exports = (env = {}) => ({
     target: "node",
     mode: env.dev ? "development" : "production",
     devtool: env.dev ? "inline-source-map" : false,
+    watchOptions: { ignored: /\.d\.ts$/ },
     entry: () => getEntry(env.dev),
     output: {
         filename: "[name]/dist/index.js",
@@ -25,8 +26,37 @@ module.exports = (env = {}) => ({
     plugins: [
         new WebpackBeforeBuildPlugin((stats, callback) => {
 
-            console.log("Building...")
-            createDeclarationFiles()
+            console.log("Checking type changes in TS files...")
+            const status = createDeclarationFiles()
+
+            switch (status) {
+
+                case "created": {
+
+                    console.log("TS declaration files successfully created.")
+
+                    break
+
+                }
+
+                case "updated": {
+
+                    console.log("TS declaration files successfully updated.")
+
+                    break
+
+                }
+
+                default: {
+
+                    console.log("TS declaration files already updated.")
+
+                    break
+
+                }
+
+            }
+
             callback()
 
         }),
