@@ -28,7 +28,7 @@ $ yarn build
 ### Launch app (only after build)
 
 ```bash
-$ node .
+$ yarn start # OR node .
 ```
 
 ### Create documentation

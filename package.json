@@ -12,6 +12,7 @@
         "dev:watch": "yarn dev --watch",
         "dev:watch:nodemon": "yarn dev:watch --env.nodemon",
         "build": "webpack",
+        "start": "node .",
         "docs": "typedoc --options docs.js",
         "create-package": "node cli/create-package.js",
         "sync-project-name": "node cli/sync-project-name.js && yarn",
