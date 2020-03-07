@@ -43,6 +43,12 @@ $ yarn docs
 $ yarn create-package <package-name> [<package-name> ...]
 ```
 
+### Update project base
+
+```bash
+$ yarn update-project-base
+```
+
 ### Sync project name with folder name (when changing the folder name)
 
 ```bash

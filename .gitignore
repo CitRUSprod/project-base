@@ -1,3 +1,7 @@
+# Folders
+.update
 dist
 node_modules
+
+# Files
 *.log

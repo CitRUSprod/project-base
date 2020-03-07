@@ -1,4 +1,4 @@
-const path = require("path")
+const getRootPath = require("./get-root-path")
 
 
 const packagesDir = "packages"
@@ -17,7 +17,7 @@ const packagesDir = "packages"
  */
 function getPackagesPath(...pathParts) {
 
-    return path.join(__dirname, "..", packagesDir, ...pathParts)
+    return getRootPath(packagesDir, ...pathParts)
 
 }
 
