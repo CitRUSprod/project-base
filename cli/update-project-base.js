@@ -56,3 +56,4 @@ fs.removeSync(updatePath)
 
 
 runCommand("yarn")
+console.log("Project base was successfully updated.")
