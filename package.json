@@ -14,6 +14,7 @@
         "build": "webpack",
         "start": "node .",
         "docs": "typedoc --options docs.js",
+        "w": "node cli/workspace.js",
         "create-package": "node cli/create-package.js",
         "update-project-base": "node cli/update-project-base.js",
         "sync-project-name": "node cli/sync-project-name.js",

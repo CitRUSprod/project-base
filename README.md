@@ -37,6 +37,12 @@ $ yarn start # OR node .
 $ yarn docs
 ```
 
+### Run yarn command in the selected package
+
+```bash
+$ yarn w <package-name> <command>
+```
+
 ### Create new packages
 
 ```bash

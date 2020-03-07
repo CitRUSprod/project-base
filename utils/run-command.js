@@ -12,7 +12,13 @@ const { execSync } = require("child_process")
  */
 function runCommand(command) {
 
-    execSync(command, { stdio: "inherit" })
+    try {
+
+        execSync(command, { stdio: "inherit" })
+
+    } catch {
+        // Error
+    }
 
 }
 
