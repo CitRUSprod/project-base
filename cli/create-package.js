@@ -1,7 +1,6 @@
-const { execSync } = require("child_process")
 const _ = require("lodash")
 const fs = require("fs-extra")
-const { getPackagesPath, saveFile, saveJson } = require("../utils")
+const { getPackagesPath, runCommand, saveFile, saveJson } = require("../utils")
 const { author, license, name } = require("../package.json")
 const { version } = require("../lerna.json")
 
@@ -80,5 +79,5 @@ for (const packageName of packageNames) {
 
 
 console.log("Creating symlinks...")
-execSync("yarn")
+runCommand("yarn")
 console.log("Symlinks were successfully created.")

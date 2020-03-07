@@ -1,6 +1,6 @@
 const path = require("path")
 const fs = require("fs-extra")
-const { getFilePaths, getPackageNames, getPackagesPath, saveJson, sortObject } = require("../utils")
+const { getFilePaths, getPackageNames, getPackagesPath, runCommand, saveJson, sortObject } = require("../utils")
 
 
 const projectPath = path.join(__dirname, "..")
@@ -90,4 +90,5 @@ for (const name of packageNames) {
 }
 
 
+runCommand("yarn")
 console.log("The project name was successfully synchronized.")

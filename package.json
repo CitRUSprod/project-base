@@ -16,7 +16,7 @@
         "docs": "typedoc --options docs.js",
         "create-package": "node cli/create-package.js",
         "update-project-base": "node cli/update-project-base.js",
-        "sync-project-name": "node cli/sync-project-name.js && yarn",
+        "sync-project-name": "node cli/sync-project-name.js",
         "release": "lerna version --no-push",
         "eslint": "eslint --color",
         "eslint:fix": "yarn eslint --fix",
