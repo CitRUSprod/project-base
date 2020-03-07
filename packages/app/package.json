@@ -4,8 +4,5 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "author": "CitRUS",
-    "license": "MIT",
-    "dependencies": {
-        "@project-base/logger": "*"
-    }
+    "license": "MIT"
 }
