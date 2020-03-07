@@ -1,5 +1,5 @@
 {
-    "name": "example",
+    "name": "project-base",
     "main": "packages/app/dist/index.js",
     "author": "CitRUS",
     "license": "MIT",

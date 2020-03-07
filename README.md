@@ -1,4 +1,4 @@
-# Example
+# Project Base
 
 > Create a TypeScript project in seconds
 
@@ -6,7 +6,7 @@
 
 ```bash
 $ cd <project-name>
-$ git clone https://github.com/CitRUSprod/example.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name
+$ git clone https://github.com/CitRUSprod/project-base.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name
 ```
 
 ## Usage

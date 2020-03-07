@@ -1,4 +1,4 @@
-import Logger from "@example/logger"
+import Logger from "@project-base/logger"
 
 
 const logger: Logger = new Logger("Example: ")
