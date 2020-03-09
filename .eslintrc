@@ -374,7 +374,6 @@
                 "@typescript-eslint/prefer-namespace-keyword": 2,
                 "@typescript-eslint/prefer-nullish-coalescing": 2,
                 "@typescript-eslint/prefer-optional-chain": 2,
-                "@typescript-eslint/prefer-readonly-parameter-types": 2,
                 "@typescript-eslint/prefer-readonly": 2,
                 "@typescript-eslint/prefer-regexp-exec": 2,
                 "@typescript-eslint/prefer-string-starts-ends-with": 2,
