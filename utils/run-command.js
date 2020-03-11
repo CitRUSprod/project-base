@@ -16,9 +16,7 @@ function runCommand(command) {
 
         execSync(command, { stdio: "inherit" })
 
-    } catch {
-        // Error
-    }
+    } catch {}
 
 }
 
