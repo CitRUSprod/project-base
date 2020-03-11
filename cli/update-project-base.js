@@ -35,7 +35,7 @@ packageJson.license = license
 packageJson.name = name
 saveJson(packageJsonPath, packageJson)
 
-const lernaJsonPath = getUpdatePath("package.json")
+const lernaJsonPath = getUpdatePath("lerna.json")
 const lernaJson = fs.readJsonSync(lernaJsonPath)
 lernaJson.version = version
 saveJson(lernaJsonPath, lernaJson)
