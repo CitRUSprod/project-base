@@ -32,7 +32,11 @@
         "test": "lerna run test --stream",
         "git:commit": "git-cz",
         "git:push": "git push --follow-tags",
-        "ci": "yarn lint && yarn test"
+        "ci": "yarn lint && yarn test",
+        "docker:up": "docker-compose up --build",
+        "docker:down": "docker-compose down --rmi local",
+        "docker:start": "yarn docker:up --exit-code-from app app & yarn docker:down",
+        "docker:ci": "yarn docker:up --exit-code-from ci ci & yarn docker:down"
     },
     "config": {
         "commitizen": {

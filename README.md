@@ -9,6 +9,8 @@ $ cd <project-name>
 $ git clone https://github.com/CitRUSprod/project-base.git . && rm -rf .git README.md && git init && yarn && yarn sync-project-name
 ```
 
+---
+
 ## Usage
 
 ### Development build
@@ -64,11 +66,27 @@ $ yarn sync-project-name
 ### Testing
 
 ```bash
-$ yarn test
+$ yarn ci
 ```
 
 ### Create release
 
 ```bash
 $ yarn release
+```
+
+---
+
+## Usage with Docker
+
+### Launch app
+
+```bash
+$ yarn docker:start
+```
+
+### Testing
+
+```bash
+$ yarn docker:ci
 ```
