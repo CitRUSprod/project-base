@@ -26,7 +26,7 @@ function saveFile(path, content) {
 
     }
 
-    const file = lines.join("\r\n")
+    const file = lines.join("\n")
     fs.outputFileSync(path, file)
 
 }

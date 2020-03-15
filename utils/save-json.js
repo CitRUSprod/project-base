@@ -16,7 +16,7 @@ const fs = require("fs-extra")
  */
 function saveJson(path, json) {
 
-    const file = `${JSON.stringify(json, null, 4).replace(/\n/g, "\r\n")}\r\n`
+    const file = `${JSON.stringify(json, null, 4)}\n`
     fs.outputFileSync(path, file)
 
 }
