@@ -59,6 +59,7 @@
     "devDependencies": {
         "@commitlint/cli": "8.3.5",
         "@types/jest": "25.1.4",
+        "@types/node": "13.9.1",
         "@typescript-eslint/eslint-plugin": "2.23.0",
         "@typescript-eslint/parser": "2.23.0",
         "before-build-webpack": "0.2.9",
