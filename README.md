@@ -90,3 +90,9 @@ $ yarn docker:start
 ```bash
 $ yarn docker:ci
 ```
+
+### Launch app after deployment
+
+```bash
+$ docker-compose up app
+```
